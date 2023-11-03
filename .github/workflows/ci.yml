@@ -26,3 +26,20 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: development
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    needs:
+      - lint
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Setup Java
+        uses: actions/setup-java@v2
+        with:
+          distribution: "temurin"
+          java-version: 19
+      - name: Maven Build
+        run: mvn -B package --file pom.xml
+      - name: List Files
+        run: ls -la target/
