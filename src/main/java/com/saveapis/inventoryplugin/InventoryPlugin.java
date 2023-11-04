@@ -8,8 +8,16 @@ import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class InventoryPlugin extends JavaPlugin {
+
+    /**
+     * The prefix for all messages sent by the plugin.
+     */
     public static final TextComponent PREFIX =
             Component.text("[Inventory] ").color(NamedTextColor.BLUE);
+
+    /**
+     * The console
+     */
     public static final ConsoleCommandSender CONSOLE =
             Bukkit.getConsoleSender();
 
