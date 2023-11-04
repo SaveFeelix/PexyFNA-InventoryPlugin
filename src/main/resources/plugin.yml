@@ -1,0 +1,9 @@
+name: ${project.name}
+version: ${project.version}
+main: com.saveapis.inventoryplugin.InventoryPlugin
+api-version: 1.20
+authors:
+  - SaveFeelix
+database: false
+load: STARTUP
+website: https://github.com/SaveFeelix/PexyFNA-InventoryPlugin
