@@ -3,6 +3,7 @@ package com.saveapis.inventoryplugin.manager;
 import com.saveapis.inventoryplugin.InventoryPlugin;
 import com.saveapis.inventoryplugin.models.EnchantmentInformation;
 import com.saveapis.inventoryplugin.models.ItemInformation;
+import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.NamespacedKey;
 import org.bukkit.enchantments.Enchantment;
@@ -19,7 +20,7 @@ public class InventoryManager {
     public static void initInventory() {
         String inventoryName = InventoryPlugin.INSTANCE.getConfig().getString("inventory.name");
         int inventorySize = InventoryPlugin.INSTANCE.getConfig().getInt("inventory.size");
-        inventory = Bukkit.createInventory(null, 9 * inventorySize);
+        inventory = Bukkit.createInventory(null, 9 * inventorySize, Component.text(inventoryName));
 
         List<ItemInformation> items = (List<ItemInformation>) InventoryPlugin.INSTANCE.getConfig().getList("items");
         for (ItemInformation item : items) {
