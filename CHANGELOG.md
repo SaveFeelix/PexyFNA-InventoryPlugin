@@ -1,12 +1,16 @@
-# InventoryPlugin (v1.2.0)
+# InventoryPlugin (v1.2.1)
+
+## Fixes
+
+- Fix version check
 
 ## Changes
 
-- Enable update check in `InventoryPlugin` Class
+No changes applied
 
 ## Additions
 
-- Add `UpdateManager` Class
+No additions applied
 
 ## Deletions
 
