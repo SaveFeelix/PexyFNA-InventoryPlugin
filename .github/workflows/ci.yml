@@ -22,7 +22,6 @@ jobs:
         with:
           distribution: "temurin"
           java-version: 19
-          cache: "maven"
       - name: Maven Build
         run: mvn -B package --file pom.xml
       - name: List Files
