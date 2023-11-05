@@ -35,6 +35,8 @@ public class InventoryManager {
     public static void saveInventory() {
         List<ItemInformation> list = new ArrayList<>();
         for (ItemStack item : inventory.getContents()) {
+            if (item == null || item.getType().isAir())
+                continue;
             ItemInformation itemInfo = new ItemInformation();
             itemInfo.setAmount(item.getAmount());
             itemInfo.setMaterial(item.getType());
