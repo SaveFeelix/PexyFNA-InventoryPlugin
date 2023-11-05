@@ -11,11 +11,12 @@ import org.bukkit.plugin.java.JavaPlugin;
 public final class InventoryPlugin extends JavaPlugin {
 
     public static final TextComponent PREFIX = Component.text("[Inventory] ").color(NamedTextColor.BLUE);
-
     public static final ConsoleCommandSender CONSOLE = Bukkit.getConsoleSender();
+    public static InventoryPlugin INSTANCE;
 
     @Override
     public void onLoad() {
+        INSTANCE = this;
         this.saveDefaultConfig();
         UpdateManager.checkForUpdate(this);
         TextComponent message = PREFIX.append(Component.text("Plugin loaded!").color(NamedTextColor.GOLD));
