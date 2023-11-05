@@ -6,11 +6,14 @@ No fixes applied
 
 ## Changes
 
-No changes applied
+ - Register `InventoryCommand` in `plugin.yml`
+ - Register `InventoryCommand` in `InventoryPlugin` Class
+ - Register `InventoryManager.initInventory` in `InventoryPlugin` Class
 
 ## Additions
 
-- Add info messages to `UpdateManager.checkForUpdate`
+- Create `InventoryCommand` Class
+- Create `InventoryManager` Class
 
 ## Deletions
 
