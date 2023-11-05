@@ -2,7 +2,7 @@
 
 ## Fixes
 
-- Fix version check
+No fixes applied
 
 ## Changes
 
@@ -10,7 +10,7 @@ No changes applied
 
 ## Additions
 
-No additions applied
+- Add info messages to `UpdateManager.checkForUpdate`
 
 ## Deletions
 
