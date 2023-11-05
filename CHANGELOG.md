@@ -2,18 +2,17 @@
 
 ## Fixes
 
-No fixes applied
+ - Fix message on permission error in `InventoryCommand` class
+ - Fix set inventory name in `InventoryManage.initInventory`
 
 ## Changes
 
- - Register `InventoryCommand` in `plugin.yml`
- - Register `InventoryCommand` in `InventoryPlugin` Class
- - Register `InventoryManager.initInventory` in `InventoryPlugin` Class
+ - Remove caching in `CI` and `CD`
+ - Restrict `CI` workflow to source changes
 
 ## Additions
 
-- Create `InventoryCommand` Class
-- Create `InventoryManager` Class
+No additions applied
 
 ## Deletions
 
