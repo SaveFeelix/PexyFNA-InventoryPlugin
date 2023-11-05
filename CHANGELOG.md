@@ -1,8 +1,8 @@
-# InventoryPlugin (v1.2.1)
+# InventoryPlugin (v1.3.0)
 
 ## Fixes
 
-- Fix version check
+No fixes applied
 
 ## Changes
 
@@ -10,7 +10,7 @@ No changes applied
 
 ## Additions
 
-No additions applied
+- Add info messages to `UpdateManager.checkForUpdate`
 
 ## Deletions
 
