@@ -2,11 +2,11 @@
 
 ## Changes
 
-- Enable config autogeneration in `InventoryPlugin` Class
+- Enable update check in `InventoryPlugin` Class
 
 ## Additions
 
-- Added `config.yml` file
+- Add `UpdateManager` Class
 
 ## Deletions
 
