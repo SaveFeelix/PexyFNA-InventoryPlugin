@@ -1,4 +1,4 @@
-# InventoryPlugin (v1.0.0)
+# InventoryPlugin (v1.1.0)
 
 ## Changes
 
