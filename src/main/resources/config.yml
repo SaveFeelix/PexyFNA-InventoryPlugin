@@ -1,5 +1,14 @@
+# Einstellungen fürs Inventar!
 inventory:
+  # Berechtigung die gesetzt werden muss, um das Inventar zu dürfen.
   permission: inventory.open
+
+  # Größe des Inventars. (1-6)
   size: 3
-  name: '&c&lInventory'
+
+  # Name des Inventars. (Farbcodes sind NOCH NICHT möglich)
+  name: 'Inventar'
+
+# Items im Inventar!
+# DIESE LISTE NICHT VERÄNDERN! Dies kann dafür sorgen, dass Items verloren gehen oder nicht richtig funktionieren!
 items: [ ]
