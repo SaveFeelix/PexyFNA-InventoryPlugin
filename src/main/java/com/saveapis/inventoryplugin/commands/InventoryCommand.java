@@ -23,7 +23,7 @@ public class InventoryCommand implements CommandExecutor {
                 commandSender.sendMessage(component);
             }
         } else {
-            TextComponent component = InventoryPlugin.PREFIX.append(Component.text("Dieser Command kann nur von einem Spiele ausgeführt werden!").color(NamedTextColor.RED));
+            TextComponent component = InventoryPlugin.PREFIX.append(Component.text("Dieser Command kann nur von einem Spieler ausgeführt werden!").color(NamedTextColor.RED));
             commandSender.sendMessage(component);
         }
         return true;
