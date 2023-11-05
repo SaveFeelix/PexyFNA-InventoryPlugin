@@ -57,14 +57,6 @@ public class InventoryManager {
         InventoryPlugin.INSTANCE.saveConfig();
     }
 
-    public static void updatePlayers(Player player) {
-        Bukkit.getOnlinePlayers().forEach(it -> {
-            if (player != it)
-                if (it.getOpenInventory().getTopInventory() == inventory)
-                    it.updateInventory();
-        });
-    }
-
     public static Inventory getInventory() {
         return inventory;
     }
