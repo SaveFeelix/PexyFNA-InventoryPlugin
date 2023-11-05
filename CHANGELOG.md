@@ -1,8 +1,10 @@
-# InventoryPlugin (v1.5.1)
+# InventoryPlugin (v1.5.2)
 
 ## Fixes
 
- - Fix `NullPointerException` in `InventoryEvents.onInventoryClose`
+- Fix `InventoryEvents` triggered by any entity!
+- Fix saving inventory to `config.yml`
+- Fix `InventoryManager.updatePlayers` to update all players except the actor!
 
 ## Changes
 
