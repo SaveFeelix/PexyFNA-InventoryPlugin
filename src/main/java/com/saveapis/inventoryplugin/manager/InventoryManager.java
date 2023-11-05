@@ -7,6 +7,7 @@ import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.NamespacedKey;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
@@ -56,10 +57,11 @@ public class InventoryManager {
         InventoryPlugin.INSTANCE.saveConfig();
     }
 
-    public static void updatePlayers() {
+    public static void updatePlayers(Player player) {
         Bukkit.getOnlinePlayers().forEach(it -> {
-            if (it.getOpenInventory().getTopInventory() == inventory)
-                it.updateInventory();
+            if (player != it)
+                if (it.getOpenInventory().getTopInventory() == inventory)
+                    it.updateInventory();
         });
     }
 
