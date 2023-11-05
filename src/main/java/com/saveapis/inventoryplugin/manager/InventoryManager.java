@@ -53,6 +53,7 @@ public class InventoryManager {
             list.add(itemInfo);
         }
         InventoryPlugin.INSTANCE.getConfig().set("items", list);
+        InventoryPlugin.INSTANCE.saveConfig();
     }
 
     public static void updatePlayers() {
