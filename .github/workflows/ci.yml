@@ -6,9 +6,13 @@ on:
   push:
     branches:
       - development
+    paths-ignore:
+      - .github/**
   pull_request:
     branches:
       - development
+    paths-ignore:
+      - .github/**
 
 jobs:
   build:
@@ -22,7 +26,6 @@ jobs:
         with:
           distribution: "temurin"
           java-version: 19
-          cache: "maven"
       - name: Maven Build
         run: mvn -B package --file pom.xml
       - name: List Files
