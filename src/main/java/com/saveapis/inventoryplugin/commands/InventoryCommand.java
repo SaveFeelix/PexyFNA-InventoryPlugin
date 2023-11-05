@@ -16,9 +16,9 @@ public class InventoryCommand implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
         if (commandSender instanceof Player player) {
             String permission = InventoryPlugin.INSTANCE.getConfig().getString("inventory.permission");
-            if (player.hasPermission(permission)) {
+            if (player.hasPermission(permission))
                 player.openInventory(InventoryManager.getInventory());
-            } else {
+            else {
                 TextComponent component = InventoryPlugin.PREFIX.append(Component.text("Du hast keine Berechtigung für diesen Command!").color(NamedTextColor.RED));
                 commandSender.sendMessage(component);
             }
