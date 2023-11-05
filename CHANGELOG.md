@@ -2,7 +2,9 @@
 
 ## Fixes
 
- - Fix `NullPointerException` in `InventoryEvents.onInventoryClose`
+- Fix `InventoryEvents` triggered by any entity!
+- Fix saving inventory to `config.yml`
+- Fix `InventoryManager.updatePlayers` to update all players except the actor!
 
 ## Changes
 
