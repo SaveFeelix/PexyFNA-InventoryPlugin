@@ -1,5 +1,6 @@
 package com.saveapis.inventoryplugin;
 
+import com.saveapis.inventoryplugin.manager.UpdateManager;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.TextComponent;
 import net.kyori.adventure.text.format.NamedTextColor;
@@ -16,6 +17,7 @@ public final class InventoryPlugin extends JavaPlugin {
     @Override
     public void onLoad() {
         this.saveDefaultConfig();
+        UpdateManager.checkForUpdate(this);
         TextComponent message = PREFIX.append(Component.text("Plugin loaded!").color(NamedTextColor.GOLD));
         CONSOLE.sendMessage(message);
     }
