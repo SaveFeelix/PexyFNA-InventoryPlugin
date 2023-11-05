@@ -2,16 +2,15 @@
 
 ## Fixes
 
-No fixes applied
+ - Fix `NullPointerException` in `InventoryEvents.onInventoryClose`
 
 ## Changes
 
- - Register `InventoryEvents` in `InventoryPlugin` class
+No changes applied
 
 ## Additions
 
- - Create `InventoryEvents` class
- - Add Documentation to `config.yml`
+No additions applied
 
 ## Deletions
 
