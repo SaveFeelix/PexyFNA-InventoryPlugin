@@ -10,6 +10,8 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.Objects;
+
 public final class InventoryPlugin extends JavaPlugin {
 
     public static final TextComponent PREFIX = Component.text("[Inventory] ").color(NamedTextColor.BLUE);
@@ -21,6 +23,7 @@ public final class InventoryPlugin extends JavaPlugin {
         INSTANCE = this;
         this.saveDefaultConfig();
         UpdateManager.checkForUpdate(this);
+        InventoryManager.initInventory();
         TextComponent message = PREFIX.append(Component.text("Plugin loaded!").color(NamedTextColor.GOLD));
         CONSOLE.sendMessage(message);
     }
