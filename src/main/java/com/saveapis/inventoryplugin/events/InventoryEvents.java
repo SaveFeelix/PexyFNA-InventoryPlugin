@@ -37,18 +37,5 @@ public class InventoryEvents implements Listener {
         if (event.getWhoClicked() instanceof Player player) {
             if (event.getInventory() == InventoryManager.getInventory()) {
                 InventoryManager.saveInventory();
-                InventoryManager.updatePlayers(player);
-            }
-        }
-    }
-
-    @EventHandler(priority = EventPriority.HIGHEST)
-    public void onInventoryInteract(InventoryInteractEvent event) {
-        if (event.getWhoClicked() instanceof Player player) {
-            if (event.getInventory() == InventoryManager.getInventory()) {
-                InventoryManager.saveInventory();
-                InventoryManager.updatePlayers(player);
-            }
-        }
     }
 }
