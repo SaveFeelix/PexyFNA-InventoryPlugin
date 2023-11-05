@@ -2,13 +2,13 @@
 
 ## Fixes
 
-- Fix `InventoryEvents` triggered by any entity!
-- Fix saving inventory to `config.yml`
-- Fix `InventoryManager.updatePlayers` to update all players except the actor!
+No fixes applied
 
 ## Changes
 
-No changes applied
+- Format files in project
+- Remove reference to `InventoryManager.updatePlayers` in `InventoryEvents` Class
+- Change `Material` in `ItemInformation`Class to String
 
 ## Additions
 
@@ -16,4 +16,5 @@ No additions applied
 
 ## Deletions
 
-No deletions applied
+- Remove `updatePlayers` in `InventoryManager` Class
+- Remove unused Events in `InventoryEvents` Class
