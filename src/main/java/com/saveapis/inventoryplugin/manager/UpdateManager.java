@@ -17,6 +17,7 @@ import java.util.List;
 
 public class UpdateManager {
     public static void checkForUpdate(JavaPlugin plugin) {
+        InventoryPlugin.CONSOLE.sendMessage(InventoryPlugin.PREFIX.append(Component.text("Version überprüfen...").color(NamedTextColor.GREEN)));
         String repoUser = "SaveFeelix";
         String repoName = "PexyFNA-InventoryPlugin";
         String apiUrl = "https://api.github.com/repos/" + repoUser + "/" + repoName + "/tags";
