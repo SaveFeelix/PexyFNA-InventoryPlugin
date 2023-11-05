@@ -43,7 +43,7 @@ public class UpdateManager {
                 list.add(dto);
             });
             GithubGetDto dto = list.get(0);
-            if (!dto.getName().equalsIgnoreCase(plugin.getPluginMeta().getVersion())) {
+            if (!dto.getName().equalsIgnoreCase("v" + plugin.getPluginMeta().getVersion())) {
                 InventoryPlugin.CONSOLE.sendMessage(InventoryPlugin.PREFIX.append(Component.text("Eine neue Version ist verfügbar!").color(NamedTextColor.RED)));
                 InventoryPlugin.CONSOLE.sendMessage(InventoryPlugin.PREFIX.append(Component.text("Aktuelle Version: " + plugin.getPluginMeta().getVersion()).color(NamedTextColor.RED)));
                 InventoryPlugin.CONSOLE.sendMessage(InventoryPlugin.PREFIX.append(Component.text("Neue Version: " + dto.getName()).color(NamedTextColor.RED)));
