@@ -6,7 +6,7 @@
 
     <groupId>com.saveapis.inventoryplugin</groupId>
     <artifactId>InventoryPlugin</artifactId>
-    <version>1.5.2</version>
+    <version>1.5.3</version>
 
     <properties>
         <maven.compiler.source>19</maven.compiler.source>
