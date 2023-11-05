@@ -1,6 +1,7 @@
 package com.saveapis.inventoryplugin;
 
 import com.saveapis.inventoryplugin.commands.InventoryCommand;
+import com.saveapis.inventoryplugin.events.InventoryEvents;
 import com.saveapis.inventoryplugin.manager.InventoryManager;
 import com.saveapis.inventoryplugin.manager.UpdateManager;
 import net.kyori.adventure.text.Component;
@@ -31,6 +32,7 @@ public final class InventoryPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         Objects.requireNonNull(this.getCommand("inventory")).setExecutor(new InventoryCommand());
+        Bukkit.getPluginManager().registerEvents(new InventoryEvents(), this);
 
         TextComponent message = PREFIX.append(Component.text("Plugin enabled!").color(NamedTextColor.GREEN));
         CONSOLE.sendMessage(message);

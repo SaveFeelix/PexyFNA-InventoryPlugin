@@ -1,18 +1,17 @@
-# InventoryPlugin (v1.4.1)
+# InventoryPlugin (v1.5.0)
 
 ## Fixes
 
- - Fix message on permission error in `InventoryCommand` class
- - Fix set inventory name in `InventoryManage.initInventory`
+No fixes applied
 
 ## Changes
 
- - Remove caching in `CI` and `CD`
- - Restrict `CI` workflow to source changes
+ - Register `InventoryEvents` in `InventoryPlugin` class
 
 ## Additions
 
-No additions applied
+ - Create `InventoryEvents` class
+ - Add Documentation to `config.yml`
 
 ## Deletions
 
