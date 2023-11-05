@@ -1,10 +1,8 @@
 package com.saveapis.inventoryplugin.models;
 
-import org.bukkit.Material;
-
 public class ItemInformation {
     private int slot;
-    private Material material;
+    private String material;
     private int amount;
     private EnchantmentInformation[] enchantment;
 
@@ -16,11 +14,11 @@ public class ItemInformation {
         this.slot = slot;
     }
 
-    public Material getMaterial() {
+    public String getMaterial() {
         return material;
     }
 
-    public void setMaterial(Material material) {
+    public void setMaterial(String material) {
         this.material = material;
     }
 
