@@ -15,6 +15,7 @@ public final class InventoryPlugin extends JavaPlugin {
 
     @Override
     public void onLoad() {
+        this.saveDefaultConfig();
         TextComponent message = PREFIX.append(Component.text("Plugin loaded!").color(NamedTextColor.GOLD));
         CONSOLE.sendMessage(message);
     }
