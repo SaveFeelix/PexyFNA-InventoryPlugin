@@ -1,0 +1,48 @@
+name: CD
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - VERSION
+
+jobs:
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: "temurin"
+          java-version: 19
+          cache: "maven"
+      - name: Maven Build
+        run: mvn -B package --file pom.xml
+      - name: List Files
+        run: ls -la target/
+      - name: Read VERSION
+        id: version
+        uses: juliangruber/read-file-action@v1
+        with:
+          path: VERSION
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        with:
+          tag_name: v${{ steps.version.outputs.content }}
+          release_name: InventoryPlugin (v${{ steps.version.outputs.content }})
+          body_path: CHANGELOG.md
+      - name: Upload Assets
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          assets_path: target/InventoryPlugin-${{ steps.version.outputs.content }}.jar
+          asset_name: InventoryPlugin-${{ steps.version.outputs.content }}.jar
+          asset_content_type: application/java-archive

@@ -4,23 +4,26 @@ name: CI
 
 on:
   push:
-    branches: [ "development" ]
+    branches:
+      - development
   pull_request:
-    branches: [ "development" ]
+    branches:
+      - development
 
 jobs:
-  lint:
-    name: Lint
+  build:
+    name: Build
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+      - name: Setup Java
+        uses: actions/setup-java@v3
         with:
-          fetch-depth: 0
-      - name: Lint
-        uses: super-linter/super-linter@v5
-        env:
-          VALIDATE_ALL_CODEBASE: false
-          DEFAULT_BRANCH: development
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          distribution: "temurin"
+          java-version: 19
+          cache: "maven"
+      - name: Maven Build
+        run: mvn -B package --file pom.xml
+      - name: List Files
+        run: ls -la target/
