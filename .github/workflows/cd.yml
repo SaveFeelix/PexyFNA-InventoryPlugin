@@ -16,10 +16,6 @@ jobs:
       repository-projects: write
     name: Publish
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: write
-      repository-projects: write
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
