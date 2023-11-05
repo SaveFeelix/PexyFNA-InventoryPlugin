@@ -1,4 +1,4 @@
-# InventoryPlugin (v1.3.0)
+# InventoryPlugin (v1.4.0)
 
 ## Fixes
 
