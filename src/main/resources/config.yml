@@ -1,4 +1,5 @@
 inventory:
   permission: inventory.open
   size: 3
+  name: '&c&lInventory'
 items: [ ]

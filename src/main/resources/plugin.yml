@@ -7,3 +7,8 @@ authors:
 database: false
 load: STARTUP
 website: https://github.com/SaveFeelix/PexyFNA-InventoryPlugin
+
+commands:
+  inventory:
+    description: Öffnet das Inventar. Für das Inventar wird eine Berechtigung benötigt! Diese kann in der config.yml geändert werden.
+    usage: /<command>
