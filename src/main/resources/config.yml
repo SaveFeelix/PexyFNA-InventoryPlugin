@@ -1,0 +1,4 @@
+inventory:
+  permission: inventory.open
+  size: 3
+items: [ ]
